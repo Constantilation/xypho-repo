@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="page">
-      <h1>Create your react xylophone</h1>
+      <h1>Потыкайся</h1>
       <div className="xylophone">
         {/* I am placeholder buttons, please create me using a map, and with your own component */}
         {notes.map((note, index) => (
@@ -50,7 +50,8 @@ function App() {
           />
         ))}
       </div>
-      {JSON.stringify(playedNotes)}
+      {JSON.stringify(playedNotes.map(note => note.name))}
+        <br/>
       <button onClick={() => replayNotes()}>Replay</button>
       <button onClick={() => resetNotes()}>Clear</button>
     </div>
