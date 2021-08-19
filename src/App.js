@@ -24,7 +24,7 @@ function App() {
 
   const replayNotes = () => {
     playedNotes.map((note, index) => {
-      window.setTimeout(() => new Audio(note.file).play(), 500 * index);
+      return window.setTimeout(() => new Audio(note.file).play(), 500 * index);
     });
   };
 
